@@ -2,12 +2,11 @@
 
 
 int main()
-{
-    int num = 50, sum = 0;
-    while(num <= 100){
-        sum += num;
-        ++num;
+{   
+    int sum = 0, val = 0;
+    while (std::cin >> val){
+        sum+= val;
     }
-    std::cout << "Sum of 50 to 100 is " << sum;
+    std::cout << "Sum is " << sum;
     return 0;
 }
