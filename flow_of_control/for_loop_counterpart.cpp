@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 
 int main(){
@@ -6,6 +7,6 @@ int main(){
     for(int num = 0; num <= 10; num++){
         sum += num;
     }
-    std::cout << "Sum: " << sum;
+    cout << "Sum: " << sum;
     return 0;
 }
