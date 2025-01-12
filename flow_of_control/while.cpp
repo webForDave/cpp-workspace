@@ -7,6 +7,6 @@ int main()
     while (std::cin >> val){
         sum+= val;
     }
-    std::cout << "Sum is " << sum;
+    std::cout << "Sum is " << sum; 
     return 0;
 }
