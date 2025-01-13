@@ -24,8 +24,13 @@ void print(string x){
 }
 
 void print(int x, double y){
-    cout << "Arg 1: " << x << endl << "Arg 2: " << y << endl;
+    cout << x << endl << y << endl;
 }
+
+void print(double x, int y){
+    cout << x << endl << y << endl;
+}
+
 
 
 void user1(){
@@ -35,5 +40,6 @@ void user1(){
 }
 
 void user2(){
-    print(0, 0);
+    print(2.5, 10);
+    print(0, 0); //raises ambiguous error
 }
