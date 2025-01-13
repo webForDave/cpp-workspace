@@ -24,4 +24,5 @@ void print(string x){
 
 void user1(){
     print(5);
+    print(2.5);
 }
