@@ -23,7 +23,7 @@ void print(string x){
     cout << x << endl;
 }
 
-void print(string x, int y){
+void print(int x, double y){
     cout << "Arg 1: " << x << endl << "Arg 2: " << y << endl;
 }
 
@@ -35,5 +35,5 @@ void user1(){
 }
 
 void user2(){
-    print("Hello world", 5);
+    print(0, 0);
 }
