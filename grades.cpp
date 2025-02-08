@@ -33,13 +33,13 @@ int main()
     // checks grades and match their equivalent letter grade
     if(user_grade >= 0 && user_grade <= 60){
         letter_grade = 'F';
-    } else if(user_grade <= 70){
+    } else if(user_grade > 60 && user_grade <= 70){
         letter_grade = 'D';
-    } else if(user_grade <= 80){
+    } else if(user_grade > 70 && user_grade <= 80){
         letter_grade = 'C';
-    } else if(user_grade <= 90){
+    } else if(user_grade > 80 && user_grade <= 90){
         letter_grade = 'B';
-    } else{
+    } else if(user_grade > 90 && user_grade <= 100){
         letter_grade = 'A';
     }
 
