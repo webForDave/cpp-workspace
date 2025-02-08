@@ -9,8 +9,7 @@
 #include <iostream>
 
 void get_grade(); // function that prompts user for a grade
-bool endsWith123(const std::string& str); // function to check if grade ends with 1, 2, or 3
-bool endsWith890(const std::string& str); // function to check if grade ends with 8, 9, or 0
+char checkLastChar(const std::string& str); // function to check what grade ends with
 
 int user_grade; // stores the grade value entered by user
 std::string letter_grade; // stores the letter equivalent of user grade
@@ -52,11 +51,8 @@ int main()
     {
         std::string grade_as_string = std::to_string(user_grade); // converts grade into a string
 
-        if(endsWith123(grade_as_string)){
-            letter_grade += '-';
-        } else if(endsWith890(grade_as_string)){
-            letter_grade += '+';
-        }
+        // concatenates the result of checking the last digit with the grade as letter
+        letter_grade += checkLastChar(grade_as_string); 
         std::cout << letter_grade << std::endl;
     }
     
@@ -71,16 +67,13 @@ void get_grade()
 }
 
 
-bool endsWith123(const std::string& str) {
-    char lastChar = str.back(); // Get the last character
+char checkLastChar(const std::string& str) {
 
-    // Check if the last character is '1', '2', or '3'
-    return lastChar == '1' || lastChar == '2' || lastChar == '3';
-}
+    char lastChar = str.back();
 
-bool endsWith890(const std::string& str) {
-    char lastChar = str.back(); // Get the last character
-
-    // Check if the last character is '8', '9', or '0'
-    return lastChar == '8' || lastChar == '9' || lastChar == '0';
+    if (lastChar == '1' || lastChar == '2' || lastChar == '3') {
+        return '-';
+    } else if (lastChar == '8' || lastChar == '9' || lastChar == '0') {
+        return '+';
+    }
 }
