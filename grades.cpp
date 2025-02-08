@@ -1,10 +1,10 @@
-/**
+/*************************************************************************
  * Grading System - Gives the letter grade version of a grade 
  * This program takes input from the user - the grade, 
  * and converts that grade into the letter equivalent
  * 
  * TODO: implement the modifiers variation.
- */
+ *************************************************************************/
 
 #include <iostream>
 
