@@ -15,7 +15,7 @@
     std::cout << "Enter a range ";
     std::cin >> user_range;
 
-    if(user_range <= 0){
+    if(user_range <= 0){ // validates user input - runs if user input is a negative number or zero
         std::cout << "Your range can not be less than 0" << std::endl;
     } else{
         while (current_number < user_range)
