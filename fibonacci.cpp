@@ -9,8 +9,7 @@
  int main()
  {
     int user_range; // dynamic feature, gets the sequence limit from the user
-    int previous_number = 1; // sequence starts from number 1
-    int current_number = 1; // first current number is 1
+    int previous_number, current_number = 1; // sequence starts from number 1, also sets current number to 1
         
     std::cout << "Enter a range ";
     std::cin >> user_range;
