@@ -15,16 +15,21 @@
     std::cout << "Enter a range ";
     std::cin >> user_range;
 
-    while(current_number < user_range)
-    {
-        // next number - gotten by adding the recent(previous) and the current numbers
-        int next_number = previous_number + current_number;
+    if(user_range <= 0){
+        std::cout << "Your range can not be less than 0" << std::endl;
+    } else{
+        while (current_number < user_range)
+        {
+            // next number - gotten by adding the recent(previous) and the current numbers
+            int next_number = previous_number + current_number;
 
-        previous_number = current_number;
-        current_number = next_number;
-        std::cout << current_number << std::endl;
+            previous_number = current_number; // changes the value of prevevious number to current number
+            current_number = next_number; // current number now equals next number
+
+            std::cout << previous_number << std::endl;
+        }
         
-
     }
+
     return 0;
  }
