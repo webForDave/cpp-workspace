@@ -1,19 +1,24 @@
 #include <iostream>
-void new_function();
+using namespace std;
 
-int myInt;
+namespace myNameSpace {
+    int myInt;
+
+    namespace innerNameSpace {
+        void newFunction()
+        {
+            cout << "Hello from the inner namespace" << endl;
+        }
+    }
+}
+
+using namespace myNameSpace;
 
 int main()
 {
-    using namespace std;
-    cout << "Enter favorite number " << endl;
+    cout << "Enter a number ";
     cin >> myInt;
-    cout << "You entered " << myInt << " added with 100 is " << myInt + 100 << endl;
-    new_function();
+    cout << "You entered " << myInt << endl;
+    innerNameSpace::newFunction();
     return 0;
-}
-
-void new_function()
-{
-    cout << "Hello from function beneath main" << endl;
 }
